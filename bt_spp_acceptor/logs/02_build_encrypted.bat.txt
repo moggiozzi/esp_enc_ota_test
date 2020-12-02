@@ -1,0 +1,59 @@
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>build_encrypted.bat
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>if defined IDF_PYTHON_DIR (goto end_in
+it  )
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>set /p ver= 0<version.txt
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>set binaryFileName=".\build\bt_spp_acc
+eptor_demo.bin"
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>set enFileName0=".\build\bt_spp_accept
+or_demo0_v7.en"
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>set enFileName1=".\build\bt_spp_accept
+or_demo1_v7.en"
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>python.exe c:\esp4\esp-idf\\components
+\esptool_py\esptool\espsecure.py encrypt_flash_data --keyfile my_key.bin --address 0x1000 -o .\build
+\bootloader\bootloader.en .\build\bootloader\bootloader.bin
+espsecure.py v3.0-dev
+Using 256-bit key
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>echo .\build\bootloader\bootloader.en
+
+.\build\bootloader\bootloader.en
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>python.exe c:\esp4\esp-idf\\components
+\esptool_py\esptool\espsecure.py encrypt_flash_data --keyfile my_key.bin --address 0x8000 -o .\build
+\partition_table\partition-table.en .\build\partition_table\partition-table.bin
+espsecure.py v3.0-dev
+Using 256-bit key
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>echo .\build\partition_table\partition
+-table.en
+.\build\partition_table\partition-table.en
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>python.exe c:\esp4\esp-idf\\components
+\esptool_py\esptool\espsecure.py encrypt_flash_data --keyfile my_key.bin --address 0x10000 -o ".\bui
+ld\bt_spp_acceptor_demo0_v7.en" ".\build\bt_spp_acceptor_demo.bin"
+espsecure.py v3.0-dev
+Using 256-bit key
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>echo ".\build\bt_spp_acceptor_demo0_v7
+.en"
+".\build\bt_spp_acceptor_demo0_v7.en"
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>python.exe c:\esp4\esp-idf\\components
+\esptool_py\esptool\espsecure.py encrypt_flash_data --keyfile my_key.bin --address 0x100000 -o ".\bu
+ild\bt_spp_acceptor_demo1_v7.en" ".\build\bt_spp_acceptor_demo.bin"
+espsecure.py v3.0-dev
+Using 256-bit key
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>echo ".\build\bt_spp_acceptor_demo1_v7
+.en"
+".\build\bt_spp_acceptor_demo1_v7.en"
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>pause
+Для продолжения нажмите любую клавишу . . .

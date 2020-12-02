@@ -1,1 +1,1 @@
-fw_write.bat com27 ./build/bootloader/bootloader.en ./build/partition_table/partition-table.en ./build/bt_spp_acceptor_demo0_v.en ./build/bt_spp_acceptor_demo1_v.en
+fw_write.bat com13 ./build/bootloader/bootloader.en ./build/partition_table/partition-table.en ./build/bt_spp_acceptor_demo0_v8.en ./build/bt_spp_acceptor_demo1_v8.en

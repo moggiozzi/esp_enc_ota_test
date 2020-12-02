@@ -1,0 +1,52 @@
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>fw_write_with_params.bat
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>fw_write.bat com13 ./build/bootloader/
+bootloader.en ./build/partition_table/partition-table.en ./build/bt_spp_acceptor_demo0_v7.en ./build
+/bt_spp_acceptor_demo1_v7.en
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>if [./build/bt_spp_acceptor_demo1_v7.e
+n] == [] goto usage
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>if defined IDF_PYTHON_DIR (goto end_in
+it  )
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>python c:\esp4\esp-idf\\components\esp
+tool_py\esptool\esptool.py --chip esp32 --port com13 --baud 921600 --before default_reset --after ha
+rd_reset write_flash -z --flash_mode dio --flash_freq 40m --flash_size detect 0x1000 ./build/bootloa
+der/bootloader.en 0x8000 ./build/partition_table/partition-table.en 0x10000 ./build/bt_spp_acceptor_
+demo0_v7.en 0x100000 ./build/bt_spp_acceptor_demo1_v7.en
+esptool.py v3.0-dev
+Serial port com13
+Connecting....
+Chip is ESP32D0WDQ6 (revision 1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 24:6f:28:b5:f8:70
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 921600
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Warning: Image file at 0x1000 doesn't look like an image file, so not changing any flash settings.
+Compressed 27680 bytes to 27688...
+Wrote 27680 bytes (27688 compressed) at 0x00001000 in 0.4 seconds (effective 613.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 1831...
+Wrote 3072 bytes (1831 compressed) at 0x00008000 in 0.0 seconds (effective 664.2 kbit/s)...
+Hash of data verified.
+Compressed 603072 bytes to 600285...
+Wrote 603072 bytes (600285 compressed) at 0x00010000 in 8.0 seconds (effective 600.5 kbit/s)...
+Hash of data verified.
+Compressed 603072 bytes to 600276...
+Wrote 603072 bytes (600276 compressed) at 0x00100000 in 8.1 seconds (effective 597.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>exit /B 0
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>

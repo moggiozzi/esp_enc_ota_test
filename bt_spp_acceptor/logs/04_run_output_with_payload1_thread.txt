@@ -1,0 +1,1098 @@
+12:02:45 USER: COM13 opened
+12:02:47 USER: COM13 rts on
+12:02:47 USER: COM13 rts off
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4
+load:0x3fff0034,len:7720
+load:0x40078000,len:15856
+ho 0 tail 12 room 4
+load:0x40080400,len:4000
+entry 0x40080688
+I (30) boot: ESP-IDF v4.2-dev-1303-gcd4fa46f5-dirty 2nd stage bootloader
+I (30) boot: compile time 11:19:26
+I (31) boot: chip revision: 1
+I (32) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (39) boot.esp32: SPI Speed      : 40MHz
+I (42) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (69) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (76) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (82) boot:  3 ota_0            OTA app          00 10 00010000 000f0000
+I (89) boot:  4 ota_1            OTA app          00 11 00100000 000f0000
+I (95) boot:  5 rawdata          Unknown data     01 ff 001f0000 00010000
+I (102) boot:  6 storage          Unknown data     01 82 00280000 00180000
+I (109) boot: End of partition table
+I (165) boot_comm: chip revision: 1, min. application chip revision: 0
+I (165) esp_image: segment 0: paddr=0x00100020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (204) esp_image: segment 1: paddr=0x001166cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) load
+I (210) esp_image: segment 2: paddr=0x00119cfc vaddr=0x40080000 size=0x00404 (  1028) load
+I (211) esp_image: segment 3: paddr=0x0011a108 vaddr=0x40080404 size=0x05f10 ( 24336) load
+I (227) esp_image: segment 4: paddr=0x00120020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (391) esp_image: segment 5: paddr=0x001854c4 vaddr=0x40086314 size=0x0e2dc ( 58076) load
+I (428) boot: Loaded app from partition at offset 0x100000
+I (428) boot: Checking flash encryption...
+I (428) flash_encrypt: flash encryption is enabled (3 plaintext flashes left)
+I (432) boot: Disabling RNG early entropy source...
+I (437) cpu_start: Pro cpu up.
+I (440) cpu_start: Application information:
+I (444) cpu_start: Project name:     bt_spp_acceptor_demo
+I (449) cpu_start: App version:      8
+I (452) cpu_start: Compile time:     Dec  2 2020 11:57:07
+I (457) cpu_start: ELF file SHA256:  0095539b24439208...
+I (463) cpu_start: ESP-IDF:          v4.2-dev-1303-gcd4fa46f5-dirty
+I (468) cpu_start: Starting app cpu, entry point is 0x400815b0
+W (474) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)
+I (0) cpu_start: App cpu up.
+I (483) heap_init: Initializing. RAM available for dynamic allocation:
+I (489) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (494) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (500) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (505) heap_init: At 3FFCAFC8 len 00015038 (84 KiB): DRAM
+I (510) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (521) heap_init: At 400945F0 len 0000BA10 (46 KiB): IRAM
+I (526) cpu_start: Pro cpu start user code
+I (544) spi_flash: detected chip: generic
+I (544) spi_flash: flash io: dio
+I (544) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (571) BTDM_INIT: BT controller compile version [1ee1530]
+I (571) system_api: Base MAC address is not set
+I (571) system_api: read default base MAC address from EFUSE
+I (681) phy: phy_version: 4181, c9a03e2, Mar 10 2020, 12:45:06, 0, 0
+I (1231) SPP_ACCEPTOR_DEMO: ESP_SPP_INIT_EVT
+I (1251) SPP_ACCEPTOR_DEMO: event: 10
+I (1251) SPP_ACCEPTOR_DEMO: ESP_SPP_START_EVT
+W (1261) fw_update_printBootInfo: Boot 0x00100000, Running 0x00100000
+I (1261) fw_update_printBootInfo: Running fw version: 8
+I (1261) task_payload1: 
+I (31261) task_ota: Try esp_ota_mark_app_valid_cancel_rollback()...
+I (31311) task_ota: esp_ota_mark_app_valid_cancel_rollback ret 0
+I (32311) task_ota: next slot addr 0x10000, size 0xf0000, enc 1
+I (33311) task_ota: Try esp_ota_set_boot_partition()...
+I (33311) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (33381) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (33391) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (33391) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (33421) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (33741) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (33851) task_ota: Please restart! Boot at 0x10000
+I (34851) task_ota: Try esp_ota_set_boot_partition()...
+I (34851) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (34921) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (34931) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (34941) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (34961) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (35281) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (35381) task_ota: Please restart! Boot at 0x10000
+I (36381) task_ota: Try esp_ota_set_boot_partition()...
+I (36381) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (36451) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (36461) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (36461) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (36491) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (36811) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (36921) task_ota: Please restart! Boot at 0x10000
+I (37921) task_ota: Try esp_ota_set_boot_partition()...
+I (37921) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (37991) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (38001) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (38001) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (38031) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (38351) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (38481) task_ota: Please restart! Boot at 0x10000
+I (39481) task_ota: Try esp_ota_set_boot_partition()...
+I (39481) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (39551) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (39561) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (39561) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (39591) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (39901) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (40011) task_ota: Please restart! Boot at 0x10000
+I (41011) task_ota: Try esp_ota_set_boot_partition()...
+I (41011) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (41081) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (41091) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (41091) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (41121) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (41441) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (41571) task_ota: Please restart! Boot at 0x10000
+I (42571) task_ota: Try esp_ota_set_boot_partition()...
+I (42571) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (42641) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (42661) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (42661) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (42681) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (43001) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (43111) task_ota: Please restart! Boot at 0x10000
+I (44111) task_ota: Try esp_ota_set_boot_partition()...
+I (44111) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (44181) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (44191) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (44191) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (44221) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (44531) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (44641) task_ota: Please restart! Boot at 0x10000
+I (45641) task_ota: Try esp_ota_set_boot_partition()...
+I (45641) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (45711) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (45721) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (45721) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (45751) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (46071) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (46151) task_ota: Please restart! Boot at 0x10000
+I (47151) task_ota: Try esp_ota_set_boot_partition()...
+I (47151) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (47221) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (47231) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (47241) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (47261) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (47571) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (47651) task_ota: Please restart! Boot at 0x10000
+I (48651) task_ota: Try esp_ota_set_boot_partition()...
+I (48651) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (48721) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (48731) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (48731) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (48761) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (49071) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (49181) task_ota: Please restart! Boot at 0x10000
+I (50181) task_ota: Try esp_ota_set_boot_partition()...
+I (50181) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (50251) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (50261) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (50261) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (50291) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (50611) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (50691) task_ota: Please restart! Boot at 0x10000
+I (51691) task_ota: Try esp_ota_set_boot_partition()...
+I (51691) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (51761) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (51771) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (51781) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (51801) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (52111) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (52201) task_ota: Please restart! Boot at 0x10000
+I (53201) task_ota: Try esp_ota_set_boot_partition()...
+I (53201) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (53271) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (53281) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (53281) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (53311) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (53631) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (53751) task_ota: Please restart! Boot at 0x10000
+I (54751) task_ota: Try esp_ota_set_boot_partition()...
+I (54751) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (54821) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (54831) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (54831) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (54861) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (55181) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (55281) task_ota: Please restart! Boot at 0x10000
+I (56281) task_ota: Try esp_ota_set_boot_partition()...
+I (56281) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (56351) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (56361) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (56361) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (56391) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (56701) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (56811) task_ota: Please restart! Boot at 0x10000
+I (57811) task_ota: Try esp_ota_set_boot_partition()...
+I (57811) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (57881) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (57891) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (57891) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (57921) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (58241) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (58371) task_ota: Please restart! Boot at 0x10000
+I (59371) task_ota: Try esp_ota_set_boot_partition()...
+I (59371) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (59441) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (59451) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (59461) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (59481) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (59791) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (59901) task_ota: Please restart! Boot at 0x10000
+I (60901) task_ota: Try esp_ota_set_boot_partition()...
+I (60901) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (60971) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (60981) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (60981) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (61011) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (61321) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (61441) task_ota: Please restart! Boot at 0x10000
+I (62441) task_ota: Try esp_ota_set_boot_partition()...
+I (62441) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (62511) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (62521) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (62521) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (62551) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (62871) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (63001) task_ota: Please restart! Boot at 0x10000
+I (64001) task_ota: Try esp_ota_set_boot_partition()...
+I (64001) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (64071) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (64081) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (64081) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (64111) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (64421) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (64551) task_ota: Please restart! Boot at 0x10000
+I (65551) task_ota: Try esp_ota_set_boot_partition()...
+I (65551) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (65621) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (65631) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (65631) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (65661) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (65981) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (66081) task_ota: Please restart! Boot at 0x10000
+I (67081) task_ota: Try esp_ota_set_boot_partition()...
+I (67081) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (67151) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (67161) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (67161) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (67191) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (67511) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (67611) task_ota: Please restart! Boot at 0x10000
+I (68611) task_ota: Try esp_ota_set_boot_partition()...
+I (68611) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (68681) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (68691) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (68691) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (68721) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (69031) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (69121) task_ota: Please restart! Boot at 0x10000
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4011b5f7  PS      : 0x00060630  A0      : 0x80112efb  A1      : 0x3ffcc8a0  
+A2      : 0x00000000  A3      : 0xfffffffc  A4      : 0x00000001  A5      : 0x00000001  
+A6      : 0x00000000  A7      : 0x0000002f  A8      : 0x10000001  A9      : 0x00000000  
+A10     : 0x0000000a  A11     : 0x600050a8  A12     : 0xf0000000  A13     : 0x6001c028  
+A14     : 0x001241fc  A15     : 0x32c051fe  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000001  LBEG    : 0x4000c46c  LEND    : 0x4000c477  LCOUNT  : 0x00000000  
+
+Backtrace:0x4011b5f4:0x3ffcc8a0 0x40112ef8:0x3ffcc960 0x40112fee:0x3ffcc990 0x400d4a13:0x3ffcc9c0 0x400fe20a:0x3ffcc9e0 0x40091ab9:0x3ffcca10
+
+
+ELF file SHA256: 0095539b24439208
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4
+load:0x3fff0034,len:7720
+load:0x40078000,len:15856
+ho 0 tail 12 room 4
+load:0x40080400,len:4000
+entry 0x40080688
+I (31) boot: ESP-IDF v4.2-dev-1303-gcd4fa46f5-dirty 2nd stage bootloader
+I (31) boot: compile time 11:19:26
+I (31) boot: chip revision: 1
+I (33) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (39) boot.esp32: SPI Speed      : 40MHz
+I (43) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (50) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (70) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (76) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (83) boot:  3 ota_0            OTA app          00 10 00010000 000f0000
+I (89) boot:  4 ota_1            OTA app          00 11 00100000 000f0000
+I (96) boot:  5 rawdata          Unknown data     01 ff 001f0000 00010000
+I (102) boot:  6 storage          Unknown data     01 82 00280000 00180000
+I (109) boot: End of partition table
+I (139) boot_comm: chip revision: 1, min. application chip revision: 0
+I (139) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (178) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) load
+I (184) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) load
+I (185) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) load
+I (201) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (365) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) load
+I (402) boot: Loaded app from partition at offset 0x10000
+I (402) boot: Checking flash encryption...
+I (402) flash_encrypt: flash encryption is enabled (3 plaintext flashes left)
+I (406) boot: Disabling RNG early entropy source...
+I (411) cpu_start: Pro cpu up.
+I (414) cpu_start: Application information:
+I (418) cpu_start: Project name:     bt_spp_acceptor_demo
+I (423) cpu_start: App version:      8
+I (426) cpu_start: Compile time:     Dec  2 2020 11:57:07
+I (431) cpu_start: ELF file SHA256:  0095539b24439208...
+I (436) cpu_start: ESP-IDF:          v4.2-dev-1303-gcd4fa46f5-dirty
+I (442) cpu_start: Starting app cpu, entry point is 0x400815b0
+W (448) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)
+I (439) cpu_start: App cpu up.
+I (458) heap_init: Initializing. RAM available for dynamic allocation:
+I (463) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (469) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (474) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (479) heap_init: At 3FFCAFC8 len 00015038 (84 KiB): DRAM
+I (484) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (489) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (495) heap_init: At 400945F0 len 0000BA10 (46 KiB): IRAM
+I (500) cpu_start: Pro cpu start user code
+I (518) spi_flash: detected chip: generic
+I (518) spi_flash: flash io: dio
+I (519) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (545) BTDM_INIT: BT controller compile version [1ee1530]
+I (545) system_api: Base MAC address is not set
+I (545) system_api: read default base MAC address from EFUSE
+I (655) phy: phy_version: 4181, c9a03e2, Mar 10 2020, 12:45:06, 0, 0
+I (1225) SPP_ACCEPTOR_DEMO: ESP_SPP_INIT_EVT
+I (1235) SPP_ACCEPTOR_DEMO: event: 10
+I (1235) SPP_ACCEPTOR_DEMO: ESP_SPP_START_EVT
+W (1245) fw_update_printBootInfo: Boot 0x00010000, Running 0x00010000
+I (1255) fw_update_printBootInfo: Running fw version: 8
+I (1255) task_payload1: 
+12:04:13 USER: COM13 closed
+12:04:25 USER: COM13 rts on
+12:04:29 USER: COM13 rts off
+12:04:32 USER: COM13 opened
+I (36325) task_ota: Try esp_ota_set_boot_partition()...
+I (36325) esp_image: segment 0: paddr=0x00100020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (36395) esp_image: segment 1: paddr=0x001166cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (36405) esp_image: segment 2: paddr=0x00119cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (36405) esp_image: segment 3: paddr=0x0011a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (36435) esp_image: segment 4: paddr=0x00120020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (36745) esp_image: segment 5: paddr=0x001854c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x40112cc3  PS      : 0x00060030  A0      : 0x800d4827  A1      : 0x3ffcc970  
+A2      : 0x00000001  A3      : 0x00000000  A4      : 0x00000014  A5      : 0x000000a5  
+A6      : 0x000000a5  A7      : 0x00060023  A8      : 0x80112cb8  A9      : 0x3ffcc950  
+A10     : 0x3ffcaa7c  A11     : 0x00060023  A12     : 0x00060020  A13     : 0x00060023  
+A14     : 0x00000001  A15     : 0x00060023  SAR     : 0x00000020  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x800d4aef  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+Backtrace:0x40112cc0:0x3ffcc970 0x400d4824:0x3ffcc9a0 0x400fdcd1:0x3ffcc9c0 0x400fe241:0x3ffcc9e0 0x40091ab9:0x3ffcca10
+
+
+ELF file SHA256: 0095539b24439208
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4
+load:0x3fff0034,len:7720
+load:0x40078000,len:15856
+ho 0 tail 12 room 4
+load:0x40080400,len:4000
+entry 0x40080688
+I (31) boot: ESP-IDF v4.2-dev-1303-gcd4fa46f5-dirty 2nd stage bootloader
+I (31) boot: compile time 11:19:26
+I (31) boot: chip revision: 1
+I (33) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (39) boot.esp32: SPI Speed      : 40MHz
+I (43) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (50) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (70) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (76) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (83) boot:  3 ota_0            OTA app          00 10 00010000 000f0000
+I (89) boot:  4 ota_1            OTA app          00 11 00100000 000f0000
+I (96) boot:  5 rawdata          Unknown data     01 ff 001f0000 00010000
+I (102) boot:  6 storage          Unknown data     01 82 00280000 00180000
+I (109) boot: End of partition table
+I (148) boot_comm: chip revision: 1, min. application chip revision: 0
+I (149) esp_image: segment 0: paddr=0x00100020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (188) esp_image: segment 1: paddr=0x001166cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) load
+I (194) esp_image: segment 2: paddr=0x00119cfc vaddr=0x40080000 size=0x00404 (  1028) load
+I (195) esp_image: segment 3: paddr=0x0011a108 vaddr=0x40080404 size=0x05f10 ( 24336) load
+I (211) esp_image: segment 4: paddr=0x00120020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (375) esp_image: segment 5: paddr=0x001854c4 vaddr=0x40086314 size=0x0e2dc ( 58076) load
+I (412) boot: Loaded app from partition at offset 0x100000
+I (412) boot: Checking flash encryption...
+I (412) flash_encrypt: flash encryption is enabled (3 plaintext flashes left)
+I (416) boot: Disabling RNG early entropy source...
+I (421) cpu_start: Pro cpu up.
+I (424) cpu_start: Application information:
+I (428) cpu_start: Project name:     bt_spp_acceptor_demo
+I (433) cpu_start: App version:      8
+I (436) cpu_start: Compile time:     Dec  2 2020 11:57:07
+I (441) cpu_start: ELF file SHA256:  0095539b24439208...
+I (446) cpu_start: ESP-IDF:          v4.2-dev-1303-gcd4fa46f5-dirty
+I (452) cpu_start: Starting app cpu, entry point is 0x400815b0
+W (458) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)
+I (449) cpu_start: App cpu up.
+I (468) heap_init: Initializing. RAM available for dynamic allocation:
+I (473) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (479) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (484) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (489) heap_init: At 3FFCAFC8 len 00015038 (84 KiB): DRAM
+I (494) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (499) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (505) heap_init: At 400945F0 len 0000BA10 (46 KiB): IRAM
+I (510) cpu_start: Pro cpu start user code
+I (528) spi_flash: detected chip: generic
+I (528) spi_flash: flash io: dio
+I (529) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (555) BTDM_INIT: BT controller compile version [1ee1530]
+I (555) system_api: Base MAC address is not set
+I (555) system_api: read default base MAC address from EFUSE
+I (665) phy: phy_version: 4181, c9a03e2, Mar 10 2020, 12:45:06, 0, 0
+I (1225) SPP_ACCEPTOR_DEMO: ESP_SPP_INIT_EVT
+I (1235) SPP_ACCEPTOR_DEMO: event: 10
+I (1245) SPP_ACCEPTOR_DEMO: ESP_SPP_START_EVT
+W (1255) fw_update_printBootInfo: Boot 0x00100000, Running 0x00100000
+I (1255) fw_update_printBootInfo: Running fw version: 8
+I (1255) task_payload1: 
+I (31255) task_ota: Try esp_ota_mark_app_valid_cancel_rollback()...
+I (31295) task_ota: esp_ota_mark_app_valid_cancel_rollback ret 0
+I (32295) task_ota: next slot addr 0x10000, size 0xf0000, enc 1
+I (33295) task_ota: Try esp_ota_set_boot_partition()...
+I (33295) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (33365) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (33375) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (33375) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (33405) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (33725) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (33825) task_ota: Please restart! Boot at 0x10000
+I (34825) task_ota: Try esp_ota_set_boot_partition()...
+I (34825) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (34895) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (34915) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (34915) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (34935) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (35255) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (35375) task_ota: Please restart! Boot at 0x10000
+I (36375) task_ota: Try esp_ota_set_boot_partition()...
+I (36375) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (36445) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (36455) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (36455) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (36485) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (36795) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (36905) task_ota: Please restart! Boot at 0x10000
+I (37905) task_ota: Try esp_ota_set_boot_partition()...
+I (37905) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (37975) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (37985) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (37985) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (38015) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (38345) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (38445) task_ota: Please restart! Boot at 0x10000
+I (39445) task_ota: Try esp_ota_set_boot_partition()...
+I (39445) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (39515) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (39525) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (39525) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (39555) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (39865) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (39975) task_ota: Please restart! Boot at 0x10000
+I (40975) task_ota: Try esp_ota_set_boot_partition()...
+I (40975) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (41045) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (41055) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (41055) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (41085) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (41405) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (41505) task_ota: Please restart! Boot at 0x10000
+I (42505) task_ota: Try esp_ota_set_boot_partition()...
+I (42505) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (42575) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (42585) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (42585) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (42615) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (42935) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (43035) task_ota: Please restart! Boot at 0x10000
+I (44035) task_ota: Try esp_ota_set_boot_partition()...
+I (44035) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (44105) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (44115) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (44115) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (44145) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (44455) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (44565) task_ota: Please restart! Boot at 0x10000
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4011b5f7  PS      : 0x00060030  A0      : 0x80112efb  A1      : 0x3ffcc8a0  
+A2      : 0x00000000  A3      : 0xfffffffc  A4      : 0x00000001  A5      : 0x00000001  
+A6      : 0x00000000  A7      : 0x0000002f  A8      : 0x10000001  A9      : 0x00000000  
+A10     : 0x0000000a  A11     : 0x600050a8  A12     : 0xf0000000  A13     : 0x6001c028  
+A14     : 0x001241fc  A15     : 0x32c051fe  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000001  LBEG    : 0x4000c46c  LEND    : 0x4000c477  LCOUNT  : 0x00000000  
+
+Backtrace:0x4011b5f4:0x3ffcc8a0 0x40112ef8:0x3ffcc960 0x40112fee:0x3ffcc990 0x400d4a13:0x3ffcc9c0 0x400fe20a:0x3ffcc9e0 0x40091ab9:0x3ffcca10
+
+
+ELF file SHA256: 0095539b24439208
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4
+load:0x3fff0034,len:7720
+load:0x40078000,len:15856
+ho 0 tail 12 room 4
+load:0x40080400,len:4000
+entry 0x40080688
+I (31) boot: ESP-IDF v4.2-dev-1303-gcd4fa46f5-dirty 2nd stage bootloader
+I (31) boot: compile time 11:19:26
+I (31) boot: chip revision: 1
+I (33) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (39) boot.esp32: SPI Speed      : 40MHz
+I (43) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (50) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (70) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (76) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (83) boot:  3 ota_0            OTA app          00 10 00010000 000f0000
+I (89) boot:  4 ota_1            OTA app          00 11 00100000 000f0000
+I (96) boot:  5 rawdata          Unknown data     01 ff 001f0000 00010000
+I (102) boot:  6 storage          Unknown data     01 82 00280000 00180000
+I (109) boot: End of partition table
+I (164) boot_comm: chip revision: 1, min. application chip revision: 0
+I (164) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (203) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) load
+I (209) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) load
+I (210) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) load
+I (227) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (390) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) load
+I (427) boot: Loaded app from partition at offset 0x10000
+I (427) boot: Checking flash encryption...
+I (427) flash_encrypt: flash encryption is enabled (3 plaintext flashes left)
+I (432) boot: Disabling RNG early entropy source...
+I (436) cpu_start: Pro cpu up.
+I (439) cpu_start: Application information:
+I (443) cpu_start: Project name:     bt_spp_acceptor_demo
+I (448) cpu_start: App version:      8
+I (451) cpu_start: Compile time:     Dec  2 2020 11:57:07
+I (457) cpu_start: ELF file SHA256:  0095539b24439208...
+I (462) cpu_start: ESP-IDF:          v4.2-dev-1303-gcd4fa46f5-dirty
+I (468) cpu_start: Starting app cpu, entry point is 0x400815b0
+W (473) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)
+I (465) cpu_start: App cpu up.
+I (483) heap_init: Initializing. RAM available for dynamic allocation:
+I (489) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (494) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (499) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (504) heap_init: At 3FFCAFC8 len 00015038 (84 KiB): DRAM
+I (509) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (520) heap_init: At 400945F0 len 0000BA10 (46 KiB): IRAM
+I (525) cpu_start: Pro cpu start user code
+I (543) spi_flash: detected chip: generic
+I (544) spi_flash: flash io: dio
+I (544) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (570) BTDM_INIT: BT controller compile version [1ee1530]
+I (570) system_api: Base MAC address is not set
+I (570) system_api: read default base MAC address from EFUSE
+I (680) phy: phy_version: 4181, c9a03e2, Mar 10 2020, 12:45:06, 0, 0
+I (1250) SPP_ACCEPTOR_DEMO: ESP_SPP_INIT_EVT
+I (1270) SPP_ACCEPTOR_DEMO: event: 10
+I (1270) SPP_ACCEPTOR_DEMO: ESP_SPP_START_EVT
+W (1280) fw_update_printBootInfo: Boot 0x00010000, Running 0x00010000
+I (1280) fw_update_printBootInfo: Running fw version: 8
+I (1280) task_payload1: 
+I (31280) task_ota: Try esp_ota_mark_app_valid_cancel_rollback()...
+I (31310) task_ota: esp_ota_mark_app_valid_cancel_rollback ret 0
+I (32310) task_ota: next slot addr 0x100000, size 0xf0000, enc 1
+I (33310) task_ota: Try esp_ota_set_boot_partition()...
+I (33310) esp_image: segment 0: paddr=0x00100020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (33380) esp_image: segment 1: paddr=0x001166cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (33390) esp_image: segment 2: paddr=0x00119cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (33390) esp_image: segment 3: paddr=0x0011a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (33420) esp_image: segment 4: paddr=0x00120020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (33740) esp_image: segment 5: paddr=0x001854c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (33840) task_ota: Please restart! Boot at 0x100000
+I (34840) task_ota: Try esp_ota_set_boot_partition()...
+I (34840) esp_image: segment 0: paddr=0x00100020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (34910) esp_image: segment 1: paddr=0x001166cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (34920) esp_image: segment 2: paddr=0x00119cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (34930) esp_image: segment 3: paddr=0x0011a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (34950) esp_image: segment 4: paddr=0x00120020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (35270) esp_image: segment 5: paddr=0x001854c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (35340) task_ota: Please restart! Boot at 0x100000
+I (36340) task_ota: Try esp_ota_set_boot_partition()...
+I (36340) esp_image: segment 0: paddr=0x00100020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (36410) esp_image: segment 1: paddr=0x001166cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (36420) esp_image: segment 2: paddr=0x00119cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (36420) esp_image: segment 3: paddr=0x0011a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (36450) esp_image: segment 4: paddr=0x00120020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (36760) esp_image: segment 5: paddr=0x001854c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (36860) task_ota: Please restart! Boot at 0x100000
+Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+Memory dump at 0x400b9e94: 453b2375 1aa93ffe f0050186
+Core  0 register dump:
+PC      : 0x400b9e98  PS      : 0x00060830  A0      : 0x80091abc  A1      : 0x3ffcc9e0  
+A2      : 0x00000002  A3      : 0x3ffc9aa0  A4      : 0x3ffca75b  A5      : 0x3ffca758  
+A6      : 0x00000000  A7      : 0x00002758  A8      : 0x800fe20d  A9      : 0x3ffcc9c0  
+A10     : 0x00000001  A11     : 0x3ffcc9e0  A12     : 0xffffffff  A13     : 0x400fe94c  
+A14     : 0x00000001  A15     : 0x53fbc422  SAR     : 0x0000001f  EXCCAUSE: 0x00000000  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+Backtrace:0x400b9e95:0x3ffcc9e0 |<-CORRUPTED
+
+
+ELF file SHA256: 0095539b24439208
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4
+load:0x3fff0034,len:7720
+load:0x40078000,len:15856
+ho 0 tail 12 room 4
+load:0x40080400,len:4000
+entry 0x40080688
+I (31) boot: ESP-IDF v4.2-dev-1303-gcd4fa46f5-dirty 2nd stage bootloader
+I (31) boot: compile time 11:19:26
+I (31) boot: chip revision: 1
+I (33) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (39) boot.esp32: SPI Speed      : 40MHz
+I (43) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (50) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (70) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (76) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (83) boot:  3 ota_0            OTA app          00 10 00010000 000f0000
+I (89) boot:  4 ota_1            OTA app          00 11 00100000 000f0000
+I (96) boot:  5 rawdata          Unknown data     01 ff 001f0000 00010000
+I (102) boot:  6 storage          Unknown data     01 82 00280000 00180000
+I (109) boot: End of partition table
+I (138) boot_comm: chip revision: 1, min. application chip revision: 0
+I (138) esp_image: segment 0: paddr=0x00100020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (177) esp_image: segment 1: paddr=0x001166cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) load
+I (184) esp_image: segment 2: paddr=0x00119cfc vaddr=0x40080000 size=0x00404 (  1028) load
+I (184) esp_image: segment 3: paddr=0x0011a108 vaddr=0x40080404 size=0x05f10 ( 24336) load
+I (201) esp_image: segment 4: paddr=0x00120020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (364) esp_image: segment 5: paddr=0x001854c4 vaddr=0x40086314 size=0x0e2dc ( 58076) load
+I (402) boot: Loaded app from partition at offset 0x100000
+I (402) boot: Checking flash encryption...
+I (402) flash_encrypt: flash encryption is enabled (3 plaintext flashes left)
+I (406) boot: Disabling RNG early entropy source...
+I (411) cpu_start: Pro cpu up.
+I (414) cpu_start: Application information:
+I (417) cpu_start: Project name:     bt_spp_acceptor_demo
+I (423) cpu_start: App version:      8
+I (426) cpu_start: Compile time:     Dec  2 2020 11:57:07
+I (431) cpu_start: ELF file SHA256:  0095539b24439208...
+I (436) cpu_start: ESP-IDF:          v4.2-dev-1303-gcd4fa46f5-dirty
+I (442) cpu_start: Starting app cpu, entry point is 0x400815b0
+W (448) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)
+I (439) cpu_start: App cpu up.
+I (457) heap_init: Initializing. RAM available for dynamic allocation:
+I (463) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (468) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (473) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (479) heap_init: At 3FFCAFC8 len 00015038 (84 KiB): DRAM
+I (484) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (489) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (495) heap_init: At 400945F0 len 0000BA10 (46 KiB): IRAM
+I (500) cpu_start: Pro cpu start user code
+I (517) spi_flash: detected chip: generic
+I (518) spi_flash: flash io: dio
+I (518) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (545) BTDM_INIT: BT controller compile version [1ee1530]
+I (545) system_api: Base MAC address is not set
+I (545) system_api: read default base MAC address from EFUSE
+I (655) phy: phy_version: 4181, c9a03e2, Mar 10 2020, 12:45:06, 0, 0
+I (1225) SPP_ACCEPTOR_DEMO: ESP_SPP_INIT_EVT
+I (1235) SPP_ACCEPTOR_DEMO: event: 10
+I (1235) SPP_ACCEPTOR_DEMO: ESP_SPP_START_EVT
+W (1245) fw_update_printBootInfo: Boot 0x00100000, Running 0x00100000
+I (1245) fw_update_printBootInfo: Running fw version: 8
+I (1255) task_payload1: 
+I (6025) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_CFM_REQ_EVT Please compare the numeric value: 741720
+I (8335) SPP_ACCEPTOR_DEMO: authentication success: ABR
+I (8335) SPP_ACCEPTOR_DEMO: 00 19 86 00 23 06 
+I (31255) task_ota: Try esp_ota_mark_app_valid_cancel_rollback()...
+I (31275) task_ota: esp_ota_mark_app_valid_cancel_rollback ret 0
+I (32275) task_ota: next slot addr 0x10000, size 0xf0000, enc 1
+I (33275) task_ota: Try esp_ota_set_boot_partition()...
+I (33275) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (33345) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (33355) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (33355) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (33385) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (33705) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (33795) task_ota: Please restart! Boot at 0x10000
+I (34795) task_ota: Try esp_ota_set_boot_partition()...
+I (34795) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (34865) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (34875) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (34875) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (34905) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (35225) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (35335) task_ota: Please restart! Boot at 0x10000
+I (36335) task_ota: Try esp_ota_set_boot_partition()...
+I (36335) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (36405) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (36415) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (36415) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (36445) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (36755) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (36875) task_ota: Please restart! Boot at 0x10000
+I (37885) task_ota: Try esp_ota_set_boot_partition()...
+I (37885) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (37955) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (37965) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (37965) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (37995) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (38305) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (38425) task_ota: Please restart! Boot at 0x10000
+I (39435) task_ota: Try esp_ota_set_boot_partition()...
+I (39435) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (39505) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (39515) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (39515) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (39545) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (39855) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (39985) task_ota: Please restart! Boot at 0x10000
+I (40985) task_ota: Try esp_ota_set_boot_partition()...
+I (40985) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (41055) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (41065) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (41065) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (41095) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (41415) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (41525) task_ota: Please restart! Boot at 0x10000
+I (42525) task_ota: Try esp_ota_set_boot_partition()...
+I (42525) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (42595) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (42605) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (42615) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (42635) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (42965) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (43065) task_ota: Please restart! Boot at 0x10000
+I (44065) task_ota: Try esp_ota_set_boot_partition()...
+I (44065) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (44135) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (44145) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (44145) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (44175) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (44485) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (44605) task_ota: Please restart! Boot at 0x10000
+I (45615) task_ota: Try esp_ota_set_boot_partition()...
+I (45615) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (45685) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (45695) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (45695) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (45725) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (46035) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (46155) task_ota: Please restart! Boot at 0x10000
+I (47165) task_ota: Try esp_ota_set_boot_partition()...
+I (47165) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (47235) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (47245) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (47245) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (47275) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (47585) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (47715) task_ota: Please restart! Boot at 0x10000
+I (48715) task_ota: Try esp_ota_set_boot_partition()...
+I (48715) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (48785) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (48795) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (48795) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (48825) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (49145) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (49255) task_ota: Please restart! Boot at 0x10000
+I (50255) task_ota: Try esp_ota_set_boot_partition()...
+I (50255) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (50325) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (50335) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (50345) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (50365) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (50685) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (50775) task_ota: Please restart! Boot at 0x10000
+I (51775) task_ota: Try esp_ota_set_boot_partition()...
+I (51775) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (51845) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (51855) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (51855) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (51885) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (52195) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (52295) task_ota: Please restart! Boot at 0x10000
+I (53295) task_ota: Try esp_ota_set_boot_partition()...
+I (53295) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (53365) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (53375) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (53375) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (53405) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (53715) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (53815) task_ota: Please restart! Boot at 0x10000
+I (54815) task_ota: Try esp_ota_set_boot_partition()...
+I (54815) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (54885) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (54895) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (54895) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (54925) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (55235) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (55335) task_ota: Please restart! Boot at 0x10000
+I (56335) task_ota: Try esp_ota_set_boot_partition()...
+I (56335) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (56405) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (56415) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (56415) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (56445) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (56765) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (56845) task_ota: Please restart! Boot at 0x10000
+I (57845) task_ota: Try esp_ota_set_boot_partition()...
+I (57845) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (57915) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (57925) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (57925) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (57955) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (58275) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (58355) task_ota: Please restart! Boot at 0x10000
+I (59355) task_ota: Try esp_ota_set_boot_partition()...
+I (59355) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (59425) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (59435) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (59435) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (59465) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+W (59675) BT_APPL: new conn_srvc id:26, app_id:255
+I (59675) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT
+I (59805) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (59915) task_ota: Please restart! Boot at 0x10000
+I (60915) task_ota: Try esp_ota_set_boot_partition()...
+I (60915) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (61005) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (61015) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (61025) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (61055) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (61425) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (61535) task_ota: Please restart! Boot at 0x10000
+I (62535) task_ota: Try esp_ota_set_boot_partition()...
+I (62535) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (62625) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (62645) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (62655) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (62685) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (63055) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (63205) task_ota: Please restart! Boot at 0x10000
+I (64205) task_ota: Try esp_ota_set_boot_partition()...
+I (64205) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (64285) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (64295) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (64295) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (64345) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (64695) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (64805) task_ota: Please restart! Boot at 0x10000
+I (65815) task_ota: Try esp_ota_set_boot_partition()...
+I (65815) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (65905) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (65925) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (65925) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (65965) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (66335) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (66475) task_ota: Please restart! Boot at 0x10000
+I (67485) task_ota: Try esp_ota_set_boot_partition()...
+I (67485) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (67555) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (67565) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (67565) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (67595) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (67925) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (68025) task_ota: Please restart! Boot at 0x10000
+I (68155) SPP_ACCEPTOR_DEMO: speed(247.472000s ~ 255.947006s): 0.002832 kbit/s
+I (69025) task_ota: Try esp_ota_set_boot_partition()...
+I (69025) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (69095) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (69105) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (69105) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (69135) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (69495) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (69645) task_ota: Please restart! Boot at 0x10000
+I (70645) task_ota: Try esp_ota_set_boot_partition()...
+I (70655) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (70735) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (70745) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (70755) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (70775) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (71145) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (71275) task_ota: Please restart! Boot at 0x10000
+I (72275) task_ota: Try esp_ota_set_boot_partition()...
+I (72275) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (72365) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (72395) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (72405) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (72435) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (72765) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (72895) task_ota: Please restart! Boot at 0x10000
+I (73465) SPP_ACCEPTOR_DEMO: speed(255.947006s ~ 261.259430s): 0.010541 kbit/s
+I (73895) task_ota: Try esp_ota_set_boot_partition()...
+I (73895) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (73965) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (73985) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (73985) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (74015) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (74335) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (74455) task_ota: Please restart! Boot at 0x10000
+I (75465) task_ota: Try esp_ota_set_boot_partition()...
+I (75465) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (75545) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (75555) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (75565) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (75585) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (75915) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (76045) task_ota: Please restart! Boot at 0x10000
+I (77045) task_ota: Try esp_ota_set_boot_partition()...
+I (77045) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (77125) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (77135) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (77155) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (77185) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (77565) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (77675) task_ota: Please restart! Boot at 0x10000
+I (78675) task_ota: Try esp_ota_set_boot_partition()...
+I (78685) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (78755) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (78775) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (78775) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (78795) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (79075) SPP_ACCEPTOR_DEMO: speed(261.259430s ~ 266.872620s): 0.048457 kbit/s
+I (79175) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+I (79285) task_ota: Please restart! Boot at 0x10000
+I (80285) task_ota: Try esp_ota_set_boot_partition()...
+I (80295) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (80365) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (80375) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (80385) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (80425) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (80755) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+W (80775) BT_RFCOMM: port_rfc_closed RFCOMM connection in state 2 closed: Closed (res: 19)
+I (80775) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT
+W (80785) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x42 current:0x0
+W (80785) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x42
+I (80845) task_ota: Please restart! Boot at 0x10000
+I (81845) task_ota: Try esp_ota_set_boot_partition()...
+I (81855) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (81935) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) 
+I (81955) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) 
+I (81965) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) 
+I (81985) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (82325) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) 
+Guru Meditation Error: Core  1 panic'ed (IllegalInstruction). Exception was unhandled.
+Memory dump at 0x4011f63c: 0c010374 43fe5b2e cd1631df
+Core  1 register dump:
+PC      : 0x4011f640  PS      : 0x00060930  A0      : 0x800d46dc  A1      : 0x3ffd2360  
+A2      : 0x00000001  A3      : 0x3f40328c  A4      : 0x00000028  A5      : 0x00000000  
+A6      : 0x00000007  A7      : 0x3ffcaac0  A8      : 0x00000000  A9      : 0x00000001  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x00000014  A13     : 0x000000a5  
+A14     : 0x000000a5  A15     : 0x00060023  SAR     : 0x00000004  EXCCAUSE: 0x00000000  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0x00000000  
+
+Backtrace:0x4011f63d:0x3ffd2360 0x400d46d9:0x3ffd23c0 0x400d479b:0x3ffd23e0 0x40091ab9:0x3ffd2410
+
+
+ELF file SHA256: 0095539b24439208
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4
+load:0x3fff0034,len:7720
+load:0x40078000,len:15856
+ho 0 tail 12 room 4
+load:0x40080400,len:4000
+entry 0x40080688
+I (31) boot: ESP-IDF v4.2-dev-1303-gcd4fa46f5-dirty 2nd stage bootloader
+I (31) boot: compile time 11:19:26
+I (31) boot: chip revision: 1
+I (33) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (39) boot.esp32: SPI Speed      : 40MHz
+I (43) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (50) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (63) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (70) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (76) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (83) boot:  3 ota_0            OTA app          00 10 00010000 000f0000
+I (89) boot:  4 ota_1            OTA app          00 11 00100000 000f0000
+I (96) boot:  5 rawdata          Unknown data     01 ff 001f0000 00010000
+I (102) boot:  6 storage          Unknown data     01 82 00280000 00180000
+I (109) boot: End of partition table
+I (138) boot_comm: chip revision: 1, min. application chip revision: 0
+I (138) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x166a4 ( 91812) map
+I (178) esp_image: segment 1: paddr=0x000266cc vaddr=0x3ffbdb60 size=0x03628 ( 13864) load
+I (184) esp_image: segment 2: paddr=0x00029cfc vaddr=0x40080000 size=0x00404 (  1028) load
+I (184) esp_image: segment 3: paddr=0x0002a108 vaddr=0x40080404 size=0x05f10 ( 24336) load
+I (201) esp_image: segment 4: paddr=0x00030020 vaddr=0x400d0020 size=0x6549c (414876) map
+I (364) esp_image: segment 5: paddr=0x000954c4 vaddr=0x40086314 size=0x0e2dc ( 58076) load
+I (402) boot: Loaded app from partition at offset 0x10000
+I (402) boot: Checking flash encryption...
+I (402) flash_encrypt: flash encryption is enabled (3 plaintext flashes left)
+I (406) boot: Disabling RNG early entropy source...
+I (411) cpu_start: Pro cpu up.
+I (414) cpu_start: Application information:
+I (417) cpu_start: Project name:     bt_spp_acceptor_demo
+I (423) cpu_start: App version:      8
+I (426) cpu_start: Compile time:     Dec  2 2020 11:57:07
+I (431) cpu_start: ELF file SHA256:  0095539b24439208...
+I (436) cpu_start: ESP-IDF:          v4.2-dev-1303-gcd4fa46f5-dirty
+I (442) cpu_start: Starting app cpu, entry point is 0x400815b0
+W (448) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)
+I (439) cpu_start: App cpu up.
+I (457) heap_init: Initializing. RAM available for dynamic allocation:
+I (463) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (468) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (473) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (479) heap_init: At 3FFCAFC8 len 00015038 (84 KiB): DRAM
+I (484) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (489) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (495) heap_init: At 400945F0 len 0000BA10 (46 KiB): IRAM
+I (500) cpu_start: Pro cpu start user code
+I (517) spi_flash: detected chip: generic
+I (518) spi_flash: flash io: dio
+I (518) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (545) BTDM_INIT: BT controller compile version [1ee1530]
+I (545) system_api: Base MAC address is not set
+I (545) system_api: read default base MAC address from EFUSE
+I (655) phy: phy_version: 4181, c9a03e2, Mar 10 2020, 12:45:06, 0, 0
+I (1215) SPP_ACCEPTOR_DEMO: ESP_SPP_INIT_EVT
+I (1235) SPP_ACCEPTOR_DEMO: event: 10
+I (1235) SPP_ACCEPTOR_DEMO: ESP_SPP_START_EVT
+W (1245) fw_update_printBootInfo: Boot 0x00010000, Running 0x00010000
+I (1245) fw_update_printBootInfo: Running fw version: 8
+I (1245) task_payload1: 
+12:07:29 USER: COM13 closed

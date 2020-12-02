@@ -1,0 +1,59 @@
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>dev_enc_init.bat com13 my_key.bin
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>if [my_key.bin] == [] goto usage
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>if defined IDF_PYTHON_DIR (goto end_in
+it  )
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>python c:\esp4\esp-idf\\components\esp
+tool_py\esptool\espefuse.py --port com13 burn_key flash_encryption my_key.bin
+espefuse.py v3.0-dev
+Connecting......
+Write in efuse block 1. The eFuse block will be read and write protected (no further changes or read
+back). This is an irreversible operation.
+Type 'BURN' (all capitals) to continue.
+BURN
+Burned key data. New value: f6 0a 6f 82 1a 9a 69 05 dd b1 33 b5 6b 4a a3 a5 c0 4f b6 1d 9e d1 5d ff
+ee 72 29 50 43 ce 7d 1f
+Disabling read/write to key efuse block...
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>python c:\esp4\esp-idf\\components\esp
+tool_py\esptool\espefuse.py --port com13 burn_efuse FLASH_CRYPT_CNT
+espefuse.py v3.0-dev
+Connecting.....
+Burning efuse FLASH_CRYPT_CNT (Flash encryption mode counter) 0x0 -> 0x1. This is an irreversible op
+eration.
+Type 'BURN' (all capitals) to continue.
+BURN
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>python c:\esp4\esp-idf\\components\esp
+tool_py\esptool\espefuse.py --port com13 burn_efuse FLASH_CRYPT_CONFIG 0x0F
+espefuse.py v3.0-dev
+Connecting.......
+Burning efuse FLASH_CRYPT_CONFIG (Flash encryption config (key tweak bits)) 0x0 -> 0xf. This is an i
+rreversible operation.
+Type 'BURN' (all capitals) to continue.
+BURN
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>python c:\esp4\esp-idf\\components\esp
+tool_py\esptool\espefuse.py --port com13 burn_efuse DISABLE_DL_DECRYPT
+espefuse.py v3.0-dev
+Connecting....
+Burning efuse DISABLE_DL_DECRYPT (Disable flash decryption in UART bootloader) 0x0 -> 0x1. This is a
+n irreversible operation.
+Type 'BURN' (all capitals) to continue.
+BURN
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>python c:\esp4\esp-idf\\components\esp
+tool_py\esptool\espefuse.py --port com13 burn_efuse DISABLE_DL_CACHE
+espefuse.py v3.0-dev
+Connecting....
+Burning efuse DISABLE_DL_CACHE (Disable flash cache in UART bootloader) 0x0 -> 0x1. This is an irrev
+ersible operation.
+Type 'BURN' (all capitals) to continue.
+BURN
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>exit /B 0
+
+d:\work\src\esp_enc_ota_test\esp_enc_ota_test\bt_spp_acceptor>
