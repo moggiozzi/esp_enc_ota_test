@@ -1,4 +1,4 @@
-@echo off
+::@echo off
 
 :: Init dependencies
 if defined IDF_PYTHON_DIR ( goto end_init )
