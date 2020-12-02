@@ -1,20 +1,14 @@
-================= =====
-Supported Targets ESP32
-================= =====
+BUG reproduce steps:
+1) Write key & efuse to device: run dev_enc_init.bat com<PORT_NUM> my_key.bin
+3) Write files to device: fw_write.bat com<PORT_NUM> ./build/bootloader/bootloader.en ./build/partition_table/partition-table.en ./build/bt_spp_acceptor_demo0_v8.en ./build/bt_spp_acceptor_demo1_v8.en
+4) Run & show output: idf.py monitor -p com<PORT_NUM>
 
-ESP-IDF BT-SPP-ACCEPTOR demo
-======================
+BUG reproduce steps (alternative with build):
+1) Write key & efuse to device: run dev_enc_init.bat com<PORT_NUM> my_key.bin
+2) build.bat
+3) build_encrypted.bat
+4) Write files to device: fw_write.bat com<PORT_NUM> ./build/bootloader/bootloader.en ./build/partition_table/partition-table.en ./build/bt_spp_acceptor_demo0_v8.en ./build/bt_spp_acceptor_demo1_v8.en
+	WARNING: change file names in script params
+5) Run & show output: idf.py monitor -p com<PORT_NUM>
 
-Demo of SPP acceptor role
-
-This is the demo for user to use ESP_APIs to create a SPP acceptor.
-
-Options choose step:
-    1. idf.py menuconfig.
-    2. enter menuconfig "Component config", choose "Bluetooth"
-    3. enter menu Bluetooth, choose "Classic Bluetooth" and "SPP Profile"
-    4. choose your options.
-
-Then set SPP_SHOW_MODE as SPP_SHOW_DATA or SPP_SHOW_SPEED in code(should be same with bt_spp_initator).
-
-After the program started, bt_spp_initator will connect it and send data.
+Sample output files in "logs" directory.
