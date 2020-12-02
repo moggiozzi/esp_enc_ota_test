@@ -18,7 +18,7 @@ python.exe %IDF_PATH%\tools\check_python_dependencies.py
 :end_init
 
 set /p ver=< version.txt
-set binaryFileName=".\build\bt_spp_acceptor_demo_esp32.bin"
+set binaryFileName=".\build\bt_spp_acceptor_demo.bin"
 set enFileName0=".\build\bt_spp_acceptor_demo0_v%ver%.en"
 set enFileName1=".\build\bt_spp_acceptor_demo1_v%ver%.en"
 

@@ -19,19 +19,19 @@ python.exe %IDF_PATH%\tools\check_python_dependencies.py
 :end_init
 
 :: Burning Encryption Key
-python %IDF_PATH%\components\esptool_py\esptool\espefuse.patched.py --port %1 burn_key flash_encryption %2
+python %IDF_PATH%\components\esptool_py\esptool\espefuse.py --port %1 burn_key flash_encryption %2
 :: Enabling Flash Encryption mechanism
-python %IDF_PATH%\components\esptool_py\esptool\espefuse.patched.py --port %1 burn_efuse FLASH_CRYPT_CNT
+python %IDF_PATH%\components\esptool_py\esptool\espefuse.py --port %1 burn_efuse FLASH_CRYPT_CNT
 :: Configuring Flash Encryption to use all address bits together with Encryption key (max value 0x0F)
-python %IDF_PATH%\components\esptool_py\esptool\espefuse.patched.py --port %1 burn_efuse FLASH_CRYPT_CONFIG 0x0F
+python %IDF_PATH%\components\esptool_py\esptool\espefuse.py --port %1 burn_efuse FLASH_CRYPT_CONFIG 0x0F
 
-python %IDF_PATH%\components\esptool_py\esptool\espefuse.patched.py --port %1 burn_efuse DISABLE_DL_DECRYPT
-python %IDF_PATH%\components\esptool_py\esptool\espefuse.patched.py --port %1 burn_efuse DISABLE_DL_CACHE
+python %IDF_PATH%\components\esptool_py\esptool\espefuse.py --port %1 burn_efuse DISABLE_DL_DECRYPT
+python %IDF_PATH%\components\esptool_py\esptool\espefuse.py --port %1 burn_efuse DISABLE_DL_CACHE
 
 :: for Release mode
 exit /B 0
-python %IDF_PATH%\components\esptool_py\esptool\espefuse.patched.py --port %1 burn_efuse DISABLE_DL_ENCRYPT
-python %IDF_PATH%\components\esptool_py\esptool\espefuse.patched.py --port %1 write_protect_efuse DISABLE_DL_ENCRYPT
+python %IDF_PATH%\components\esptool_py\esptool\espefuse.py --port %1 burn_efuse DISABLE_DL_ENCRYPT
+python %IDF_PATH%\components\esptool_py\esptool\espefuse.py --port %1 write_protect_efuse DISABLE_DL_ENCRYPT
 
 exit /B 0
 
