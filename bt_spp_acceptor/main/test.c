@@ -53,6 +53,17 @@ void run_test(void) {
 	err = esp_ota_mark_app_valid_cancel_rollback();
 	ESP_LOGI(__func__, "esp_ota_mark_app_valid_cancel_rollback ret %d", err);
 
+	// get next slot
+	fw_update_info.update_partition = esp_ota_get_next_update_partition(NULL);
+	if (fw_update_info.update_partition != NULL) {
+		ESP_LOGI(__func__, "next slot addr 0x%x, size 0x%x, enc %d",
+				fw_update_info.update_partition->address,
+				fw_update_info.update_partition->size,
+				fw_update_info.update_partition->encrypted);
+	} else {
+		ESP_LOGI(__func__, "esp_ota_get_next_update_partition() failed");
+	}
+
 	// change slot
 	ESP_LOGI(__func__, "Try esp_ota_set_boot_partition()...");
 	err = esp_ota_set_boot_partition(fw_update_info.update_partition);
